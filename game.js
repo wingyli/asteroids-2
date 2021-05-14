@@ -18,6 +18,12 @@ window.addEventListener('keyup', event => {
 })
 
 // challenge: check user input to add laser
+window.addEventListener('keypress', event => {
+  if (event.code === 'Space') {
+    let laser = new Laser(ship.x, ship.y, 10, 10)
+    lasers.push(laser)
+  }
+})
 
 // game loop
 function loop() {

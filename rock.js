@@ -7,7 +7,9 @@ class Rock {
     this.y = Math.random() * canvas.height
     this.dx = (Math.random() * 6) - 3
     this.dy = (Math.random() * 6) - 3
-    this.size = 100
+    let sizes = [50, 80, 100, 120]
+    let size_index = Math.floor(Math.random() * sizes.length)
+    this.size = sizes[size_index]
   }
   step() {
     this.x += this.dx
